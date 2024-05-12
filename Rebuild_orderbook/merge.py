@@ -4,13 +4,14 @@ date2 = []
 date1 = []
 
 
-with open('order.txt') as input_file:
+with open('esOrderWholeDay.txt') as input_file:
+    
     for line in input_file:
         a = line.strip().split(',')
         if a[8]=='trade':
             order.append(a)
 
-with open('processed_trade.txt') as input_file:
+with open('TradeWholeDay.txt') as input_file:
     for line in input_file:
         trade.append(line.strip().split(','))
 

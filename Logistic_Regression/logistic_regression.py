@@ -1,8 +1,4 @@
 from numpy import *
-
-
-
-
 def getcomb():
     import scipy.special as sp
     fr = open('/Users/shengdongliu/Downloads/0401.txt')
@@ -188,14 +184,14 @@ def Test():
     up_correct_Rate = 1-(float(upcount)/totalup)
     down_correct_Rate=1-(float(downcount)/totaldown)
 
-    file = open("/Users/shengdongliu/Downloads/towu.txt", "w")
+    file = open("Users\hp\Desktop\new2_hft\Ml_HFT\Sample_data\sample_ES_DATA_20150917.txt", "w")
     for n in range(len(predict)) :
         file.write(str(predict[n]))
         file.write("\n")
     errorRate=1-errorRate
-    print "correct rate is: %f" %errorRate
-    print "correct up rate: %f" %up_correct_Rate
-    print "correct down rate: %f" %down_correct_Rate
+    print ("correct rate is: %f" %errorRate)
+    print ("correct up rate: %f" %up_correct_Rate)
+    print ("correct down rate: %f" %down_correct_Rate)
 
     return errorRate
 
@@ -203,9 +199,9 @@ def multiTest():
     numTests = 10; errorSum=0.0
     for k in range(numTests):
         errorSum += Test()
-    print "after %d iterations the average error rate is: %f" % (numTests, errorSum/float(numTests))
+    print ("after %d iterations the average error rate is: %f" % (numTests, errorSum/float(numTests)))
 #csvtotxt()
-Test()
+# Test()
 #multiTest()
 
 #readheader()

@@ -19,7 +19,7 @@ def weighted_mean(x,y):
 
 flag=0
 
-with open('/Users/fushuyue/Dropbox/CME practicum/CMEdata/ESZ5_20150917.txt') as input_file:
+with open('Sample_data/sample_ES_DATA_20150917.txt') as input_file:
     for line in input_file:
         if a[1] == 'TRADEREC':
             flag = True
@@ -86,17 +86,17 @@ dorder = pd.DataFrame(order, columns=['type','time', 'bid price', 'ask price', '
 
 
 
-'''
+
 plt.plot(dtrade['price'])
 plt.ylim(198100,199000)
 plt.show()
 
 
-plt.hist(lots,bins=10,normed=1)
+plt.hist(lots, bins=10, density=True)
 plt.show()
 
 print('finish plot')
-'''
+
 
 dorder.to_csv('esOrderWholeDay.txt',index=False)
 dtrade.to_csv('esTradeWholeDay.txt',index=False)

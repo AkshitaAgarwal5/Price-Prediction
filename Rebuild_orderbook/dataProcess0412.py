@@ -21,8 +21,10 @@ for i in df.index:
 mydata = []
 numberBeforeTrade = 5
 flag = 0
+# Sample_data/sample_ES_DATA_20150917.txt
 count = 0
-with open("/Users/fushuyue/Desktop/python/inverse.txt") as input_file:
+with open('Sample_data/sample_ES_DATA_20150917.txt ') as input_file:
+    # inverse file(used)
     for line in input_file:
         a = line.strip().split(',')
         if flag:
@@ -64,6 +66,7 @@ header1 = ['type','time','best ask','best bid','average bid price','average ask 
 
 
 df = pd.DataFrame(mydata,columns=header)
-df = df.ix[::-1]
+df = df.iloc[::-1]
+
 
 df.to_csv("keke1.txt")

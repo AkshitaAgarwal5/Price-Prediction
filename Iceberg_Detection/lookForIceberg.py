@@ -9,7 +9,7 @@ a = [0,0,0,0]  # initialize
 iceberg_flag = 0
 flag=0
 
-with open('/Users/fushuyue/Desktop/python/ESZ5_20150917.txt') as input_file:
+with open('Sample_data/sample_ES_DATA_20150917.txt') as input_file:
     for line in input_file:
 
         # trade data structure: 0 time 1 name; 2 quantity; 3 price; 4 volume; 5 flag
@@ -142,5 +142,5 @@ with open('/Users/fushuyue/Desktop/python/ESZ5_20150917.txt') as input_file:
 
 df = pd.DataFrame(iceberg, columns = ['time', 'price', 'volume', 'displayed size', 'buy/sell', 'type'])
 
-df.to_csv('/Users/fushuyue/Desktop/iceberg.txt',index=False)
+df.to_csv('text_file.txt.txt',index=False)
 
